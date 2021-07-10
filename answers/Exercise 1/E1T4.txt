@@ -1,0 +1,17 @@
+Text file identifying 2 poor security practices with justification.
+
+- the WebServiceInstance is behind an application load balancer, but not still yet secure. It should be in the private subnet.
+- S3 buckets: There is no encryption used on the buckets and hence everybody could read and access the S3 buckets.
+
+create-stack-key.pem
+aws cloudformation create-stack --region us-east-1 --stack-name c3-app --template-body file://starter/c3-app.yml --parameters ParameterKey=KeyPair,ParameterValue=create-stack-key.pem --capabilities CAPABILITY_IAM
+
+BucketNameRecipesFree	cand-c3-free-recipes-134111624115	Name of the Amazon S3 bucket that you will upload free recipes to.	BucketNameRecipesFree
+BucketNameRecipesSecret	cand-c3-secret-recipes-134111624115	Name of the Amazon S3 bucket that you will upload secret recipes to.	BucketNameRecipesSecret
+
+AttackInstanceIP	ec2-18-232-137-204.compute-1.amazonaws.com
+ApplicationInstanceIP	ec2-35-170-168-196.compute-1.amazonaws.com
+ApplicationURL	c1-web-service-alb-2120917985.us-east-1.elb.amazonaws.com
+
+aws s3 cp free_recipe.txt s3://cand-c3-free-recipes-134111624115/ --region us-east-1
+aws s3 cp ./starter/secret_recipe.txt s3://cand-c3-secret-recipes-134111624115/ --region us-east-1

@@ -1,0 +1,16 @@
+1. Scan infrastructure as code templates
+terrascan: https://github.com/accurics/terrascan
+
+Example vulnerability:
+terrascan: ingress at 0.0.0.0
+
+2. Scan AMI’s or containers for OS vulnerabilities
+trivy: https://github.com/aquasecurity/trivy
+
+
+3.Scan an AWS environment for cloud configuration vulnerabilities
+AWStealth: https://github.com/cyberark/SkyArk/tree/master/AWStealth
+
+Example vulnerability
+Unsecured privileged users - no MFA and no constrained permission condition 
+

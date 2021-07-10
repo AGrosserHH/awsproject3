@@ -1,0 +1,14 @@
+4.1 Ensure no security groups allow ingress from 0.0.0.0/0 to port 22
+4.2 Ensure no security groups allow ingress from 0.0.0.0/0 to port 3389
+2.9 Ensure VPC flow logging is enabled in all VPCs
+S3.4 S3 buckets should have server-side encryption enabled
+S3.5 S3 buckets should require requests to use Secure Socket Layer
+EC2.3 Attached EBS volumes should be encrypted at-rest
+
+
+Solutions
+Provide specific IP address range for security groups ingress on port 22
+Enable VPC flow logging
+Remove unrestricted access to port 3389
+Encrypt S3 buckets
+Encrypt EC2 

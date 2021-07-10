@@ -1,0 +1,7 @@
+1. What findings were detected related to the brute force attack?
+A brute force attack was detected.
+
+3. Research the AWS Guard Duty documentation page and explain how GuardDuty may have detected this attack - i.e. what was its source of information?
+Attacks can occur because a rule with Type SSH allows connections from all sources (0.0.0.0/0) over Port Range 22. Allowing 0.0.0.0/0 over Port Range 22 introduces a security risk.
+
+Typically these attacks come from bots that are looking for targets to intrude EC2 instances. You can mitigate the risk of intrusion by restricting SSH access. It's a best practice to configure security groups to allow SSH access only from specific sources that you own, such as from bastion host

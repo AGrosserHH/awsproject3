@@ -1,16 +1,20 @@
 1. Scan infrastructure as code templates
 terrascan: https://github.com/accurics/terrascan
+CFRipper: Library and CLI tool for analysing CloudFormation templates to check for security compliance
 
 Example vulnerability:
 terrascan: ingress at 0.0.0.0
+EC2SecurityGroupMissingEgressRule: Missing egress rule in NoIngressSecurityGroup means all traffic is allowed outbound. Make this explicit if it is desired configuration
 
 2. Scan AMI’s or containers for OS vulnerabilities
-trivy: https://github.com/aquasecurity/trivy
+Anchore Engine: Vulnerability Static Analysis for Containers
 
+Example:
+CVE: http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-14697
 
 3.Scan an AWS environment for cloud configuration vulnerabilities
-AWStealth: https://github.com/cyberark/SkyArk/tree/master/AWStealth
+AWS config: A service that enables you to assess, audit und evaluate the configs of your AWS resources
 
 Example vulnerability
-Unsecured privileged users - no MFA and no constrained permission condition 
+s3-bucket-server-side-encryption-enabled: Check that Amazon S3 buckets has S3 default encryption enabled
 
